@@ -1,0 +1,105 @@
+/*
+* {box-sizing: border-box}
+*/
+
+
+
+.wrapper-main {
+    margin: 75px auto;
+    padding: 5px;
+    width: 90%;
+
+
+}
+
+
+.wrapper-main img{
+    padding-top: 20px;
+}
+h1 {
+    color: white;
+}
+
+/*
+#reginput{
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    border-radius: 5px;
+    background: white;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+*/
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+.regbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.regbtn:hover {
+    opacity:1;
+}
+
+.signuperror {
+    color: red;
+    font-size: 20px;
+}
+
+.signupsuccess {
+    color: greenyellow;
+    font-size: 20px;
+}
+
+.search-header{
+    padding-top: 110px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.article-container{
+    width: 80%;
+    margin: 0 auto;
+}
+.article-container a{
+    text-decoration: none;
+    color: white;
+}
+
+.article-box{
+    padding-bottom: 30px;
+    width: 100%;
+}
+.article-text{
+    text-align: left;
+}
+
+@media (min-width: 800px) {
+    .wrapper-main {
+        width: 30%;
+    }
+    .article-box{
+        padding-bottom: 30px;
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+
+
+
+

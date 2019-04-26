@@ -1,0 +1,25 @@
+.container {
+    background-color: grey;
+    padding-top: 50px;
+
+}
+
+.regbtn {
+    border: 1px solid #303030;
+    background-color: orange;
+    color: white;
+    margin: 10px;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+
+
+@media (min-width:801px) {
+    .container {
+        width: 400px;
+        margin: 20px auto;
+    }
+}

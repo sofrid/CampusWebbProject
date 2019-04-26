@@ -1,0 +1,410 @@
+//Start av Aktuellt delen
+/*Används för att kunna skriva det som ska vara i desktop läge. */
+@mixin desktop {
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
+}
+//Används för mobilläge + tablet.
+@mixin mobile{
+  @media screen and (max-width:799px)  {
+    @content;
+  }
+}
+
+$desktop : 801px;
+$colorBgAktuellt:#1E4363;
+$colorBgAktuellt1:lighten(#1E4363, 70%);
+$textfärg:white;
+$header: #1E4363;
+$btn:#FFB00D;
+$btnRed:#FF5B5B;
+$fontHeading: 'Roboto Slab', serif;
+$fontText:'Roboto', sans-serif;
+//Css wrapen som finns i index.php filen.
+.aktuellt{
+  padding: 5px 0 0 0;
+  background-color: $colorBgAktuellt1;
+  h2{
+    font-size: 50px;
+    padding: 10px;
+    color:black;
+    font-family: $fontHeading;
+  }
+  //Wrap runt allt innehåll på aktuellt delen.
+  .contentAktuellt {
+    display: grid;
+    grid-template-rows: auto;
+    grid-gap: 2px;
+    color:black;
+    background-color: $colorBgAktuellt1;
+    @include desktop {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      grid-gap: 10px;
+      padding-bottom: 30px;
+      background-color: $colorBgAktuellt1;
+
+    }
+    #aStartText{
+      @include desktop {
+        margin-top: 50px;
+      }
+    }
+    //Css grid layouten på aktuellt delen på startsidan
+    .item1 {
+      @include desktop {
+        grid-row: 1 / 3;
+      }
+    }
+    //Css grid layouten på aktuellt delen på startsidan
+    .item2 {
+      @include desktop {
+        grid-row: 1 / 3;
+
+      }
+    }
+    //Css grid layouten på aktuellt delen på startsidan
+    .item3 {
+      @include desktop {
+        grid-row: 1 / 3;
+
+      }
+    }
+    //Css för knapparna som syns på mobilläge
+    .btn {
+      border: 1px solid #303030;
+      background-color: $btn;
+      color: #303030;
+      padding: 12px 20px;
+      border-radius: 4px;
+      font-size: 20px;
+      width: 50%;
+      height: auto;
+      text-align: center;
+      @include desktop {
+        display: none;
+      }
+    }
+    //Css för texten på aktuellt delen på startsidan
+    p {
+      font-size: 20px;
+      text-decoration: none;
+      margin: 15px;
+      font-family: $fontText;
+      color: black;
+      @include desktop {
+        font-size: 20px;
+        font-family: $fontText;
+        color: black;
+        width: 85%;
+        text-align: left;
+        padding-left: 10px;
+      }
+    }
+    //Css för rubrikerna på aktuellt delen på startsidan
+    h3 {
+      font-size: 30px;
+      font-family: $fontHeading;
+      color: black;
+      @include desktop {
+        font-size: 25px;
+        font-family: $fontHeading;
+        color: black;
+        text-align: left;
+        margin-left: 25px;
+      }
+    }
+  }
+  //Css för bilderna på startsidan aktuellt delen
+  img {
+    margin: 15px 10px 10px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 90%;
+    height: auto;
+    @include desktop {
+      margin: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 5px;
+      width: 350px;
+      cursor: pointer;
+    }
+
+  }
+  //Gör så att bilderna spegelvänds vid hover
+  img:hover {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+}
+//Wrap runt hela innehållet på aktuelltPostSidan
+.akutelltWrap {
+  color:$textfärg;
+  @include desktop{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+  }
+  //Css för rubriken på sidan
+  #headingAktuellt{
+
+    margin-top: 75px;
+    padding-top: 10px;
+    @include desktop {
+      grid-column: 1 / span 2;
+      font-size: 50px;
+      margin-top: 75px;
+
+    }
+  }
+  //Wrap för att kunna få bort knapparna vid mobilläge.
+  .aktuelltSideMenu{@include mobile{display: none;}}
+
+  //Wrapen runt knapparna.
+  tab {
+    display: none;
+    background-color: $colorBgAktuellt;
+    @include desktop {
+      background-color: $colorBgAktuellt;
+      width: 100%;
+      height: 300px;
+      margin-right: 10px;
+    }
+  }
+  /* Css för knapparna som används för att öppna tab content */
+  .tab button {
+    display: none;
+    @include desktop {
+      display: block;
+      background-color: inherit;
+      color: $textfärg;
+      padding: 22px 16px;
+      width: 300px;
+      outline: none;
+      text-align: center;
+      cursor: pointer;
+      transition: 0.3s;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      font-size: 18px;
+    }
+  }
+
+  /* Ändrar färg vid hover*/
+  .tab button:hover {
+    @include desktop {
+      background-color: $btn;
+    }
+  }
+
+  /* Skapar en aktiv/nuvarande tab button klass */
+  .tab button.active {
+    @include desktop {
+      background-color: $header;
+      color:white;
+    }
+  }
+  //
+  /* Css för Tab content */
+  .tabcontent {
+    @include desktop {
+      margin: 25px 0 25px 0;
+      padding: 0 12px;
+      border: none;
+      width: 70%;
+      height: auto;
+    }
+  }
+  //Css för knapparna
+  .btn {
+    border: 1px solid #303030;
+    background-color: $btn;
+    color: #303030;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-size: 20px;
+    width: 50%;
+    height: auto;
+    text-align: center;
+  }
+  //Css för bilderna på aktuelltPost.php
+  .aktuelltImg{
+    @include mobile {
+      width: 300px;
+      height: auto;
+    }
+    @include desktop {
+      img {
+        margin: 30px 5px 30px 5px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
+      }
+      img:hover {
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+      }
+    }
+  }
+  //Css för text delen på aktuelltPost.php
+  .aktuelltText{
+    width: 100%;
+    margin: 15px 0 30px 0;
+    color:$textfärg;
+    line-height: 1.5;
+    @include desktop{
+      width: 60%;
+      margin: 15px 0 30px 60px;
+      text-align: left;
+      line-height: 1.5;
+    }
+    .text{display: none;}
+  }
+}
+
+
+//Css för Skapa inlägg
+.aWarp {
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 5px;
+  @include desktop{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 5px;
+  }
+  .CreateAktuellt {
+    margin-top: 75px;
+    background-color: $colorBgAktuellt;
+    color: $textfärg;
+    padding: 10px 0 10px 0;
+    textarea {
+      resize: none;
+    }
+    .createPost {
+      display: grid;
+      grid-template-columns: auto;
+      grid-gap: 10px;
+      margin: 50px;
+    }
+    .btn {
+      border: 1px solid #303030;
+      background-color: $btn;
+      color: #303030;
+      padding: 12px 20px;
+      border-radius: 4px;
+      font-size: 20px;
+      width: 20%;
+      height: auto;
+      text-align: center;
+      margin-top: 10px;
+      margin-right: 10px;
+    }
+
+    .btn1 {
+      border: 1px solid #303030;
+      background-color: $btnRed;
+      color: #303030;
+      padding: 12px 20px;
+      border-radius: 4px;
+      font-size: 20px;
+      width: 20%;
+      height: auto;
+      text-align: center;
+      margin-right: 10px;
+    }
+  }
+  .adminAktuellt {
+    margin-top: 75px;
+    background-color: $header;
+    #createH3 {
+      color: white;
+    }
+  }
+}
+.aktuelltbild{
+  width: 100%;
+  height: 500px;
+  margin-top: 75px;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../img/aktuelltBild.jpg");
+}
+.DeleteAktuellt{
+  margin-top: 55px;
+  padding-top: 220px;
+  text-align: center;
+  height: 600px;
+  background-color: $colorBgAktuellt;
+  color: $textfärg;
+
+  .btn{
+    border: 1px solid #303030;
+    background-color: $btn;
+    color: #303030;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-size: 20px;
+    width: 20%;
+    height: auto;
+    text-align: center;
+    margin-right: 10px;
+  }
+  .btn1{
+    border: 1px solid #303030;
+    background-color: $btnRed;
+    color: #303030;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-size: 20px;
+    width: 20%;
+    height: auto;
+    text-align: center;
+    margin-right: 10px;
+  }
+}
+.UpdateAktuellt {
+  margin-top: 75px;
+  background-color: $colorBgAktuellt;
+  color: $textfärg;
+  padding: 10px 0 10px 0;
+  textarea {
+    resize: none;
+  }
+  .createPost {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 10px;
+    margin: 50px;
+  }
+  .btn {
+    border: 1px solid #303030;
+    background-color: $btn;
+    color: #303030;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-size: 20px;
+    width: 20%;
+    height: auto;
+    text-align: center;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+
+  .btn1 {
+    border: 1px solid #303030;
+    background-color: $btnRed;
+    color: #303030;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-size: 20px;
+    width: 20%;
+    height: auto;
+    text-align: center;
+    margin-right: 10px;
+  }
+}

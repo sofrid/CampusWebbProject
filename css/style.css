@@ -1,0 +1,1474 @@
+@charset "UTF-8";
+/*Används för att kunna skriva det som ska vara i desktop läge. */
+.aktuellt {
+  padding: 5px 0 0 0;
+  background-color: #edf3f9;
+}
+.aktuellt h2 {
+  font-size: 50px;
+  padding: 10px;
+  color: black;
+  font-family: "Roboto Slab", serif;
+}
+.aktuellt .contentAktuellt {
+  display: grid;
+  grid-template-rows: auto;
+  grid-gap: 2px;
+  color: black;
+  background-color: #edf3f9;
+}
+@media screen and (min-width: 801px) {
+  .aktuellt .contentAktuellt {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    padding-bottom: 30px;
+    background-color: #edf3f9;
+  }
+}
+@media screen and (min-width: 801px) {
+  .aktuellt .contentAktuellt #aStartText {
+    margin-top: 50px;
+  }
+}
+@media screen and (min-width: 801px) {
+  .aktuellt .contentAktuellt .item1 {
+    grid-row: 1/3;
+  }
+}
+@media screen and (min-width: 801px) {
+  .aktuellt .contentAktuellt .item2 {
+    grid-row: 1/3;
+  }
+}
+@media screen and (min-width: 801px) {
+  .aktuellt .contentAktuellt .item3 {
+    grid-row: 1/3;
+  }
+}
+.aktuellt .contentAktuellt .btn {
+  border: 1px solid #303030;
+  background-color: #FFB00D;
+  color: #303030;
+  padding: 12px 20px;
+  border-radius: 4px;
+  font-size: 20px;
+  width: 50%;
+  height: auto;
+  text-align: center;
+}
+@media screen and (min-width: 801px) {
+  .aktuellt .contentAktuellt .btn {
+    display: none;
+  }
+}
+.aktuellt .contentAktuellt p {
+  font-size: 20px;
+  text-decoration: none;
+  margin: 15px;
+  font-family: "Roboto", sans-serif;
+  color: black;
+}
+@media screen and (min-width: 801px) {
+  .aktuellt .contentAktuellt p {
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    color: black;
+    width: 85%;
+    text-align: left;
+    padding-left: 10px;
+  }
+}
+.aktuellt .contentAktuellt h3 {
+  font-size: 30px;
+  font-family: "Roboto Slab", serif;
+  color: black;
+}
+@media screen and (min-width: 801px) {
+  .aktuellt .contentAktuellt h3 {
+    font-size: 25px;
+    font-family: "Roboto Slab", serif;
+    color: black;
+    text-align: left;
+    margin-left: 25px;
+  }
+}
+.aktuellt img {
+  margin: 15px 10px 10px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 90%;
+  height: auto;
+}
+@media screen and (min-width: 801px) {
+  .aktuellt img {
+    margin: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 350px;
+    cursor: pointer;
+  }
+}
+.aktuellt img:hover {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.akutelltWrap {
+  color: white;
+  /* Css för knapparna som används för att öppna tab content */
+  /* Ändrar färg vid hover*/
+  /* Skapar en aktiv/nuvarande tab button klass */
+  /* Css för Tab content */
+}
+@media screen and (min-width: 801px) {
+  .akutelltWrap {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+  }
+}
+.akutelltWrap #headingAktuellt {
+  margin-top: 75px;
+  padding-top: 10px;
+}
+@media screen and (min-width: 801px) {
+  .akutelltWrap #headingAktuellt {
+    grid-column: 1/span 2;
+    font-size: 50px;
+    margin-top: 75px;
+  }
+}
+@media screen and (max-width: 799px) {
+  .akutelltWrap .aktuelltSideMenu {
+    display: none;
+  }
+}
+.akutelltWrap tab {
+  display: none;
+  background-color: #1E4363;
+}
+@media screen and (min-width: 801px) {
+  .akutelltWrap tab {
+    background-color: #1E4363;
+    width: 100%;
+    height: 300px;
+    margin-right: 10px;
+  }
+}
+.akutelltWrap .tab button {
+  display: none;
+}
+@media screen and (min-width: 801px) {
+  .akutelltWrap .tab button {
+    display: block;
+    background-color: inherit;
+    color: white;
+    padding: 22px 16px;
+    width: 300px;
+    outline: none;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 801px) {
+  .akutelltWrap .tab button:hover {
+    background-color: #FFB00D;
+  }
+}
+@media screen and (min-width: 801px) {
+  .akutelltWrap .tab button.active {
+    background-color: #1E4363;
+    color: white;
+  }
+}
+@media screen and (min-width: 801px) {
+  .akutelltWrap .tabcontent {
+    margin: 25px 0 25px 0;
+    padding: 0 12px;
+    border: none;
+    width: 70%;
+    height: auto;
+  }
+}
+.akutelltWrap .btn {
+  border: 1px solid #303030;
+  background-color: #FFB00D;
+  color: #303030;
+  padding: 12px 20px;
+  border-radius: 4px;
+  font-size: 20px;
+  width: 50%;
+  height: auto;
+  text-align: center;
+}
+@media screen and (max-width: 799px) {
+  .akutelltWrap .aktuelltImg {
+    width: 300px;
+    height: auto;
+  }
+}
+@media screen and (min-width: 801px) {
+  .akutelltWrap .aktuelltImg img {
+    margin: 30px 5px 30px 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+  }
+  .akutelltWrap .aktuelltImg img:hover {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+}
+.akutelltWrap .aktuelltText {
+  width: 100%;
+  margin: 15px 0 30px 0;
+  color: white;
+  line-height: 1.5;
+}
+@media screen and (min-width: 801px) {
+  .akutelltWrap .aktuelltText {
+    width: 60%;
+    margin: 15px 0 30px 60px;
+    text-align: left;
+    line-height: 1.5;
+  }
+}
+.akutelltWrap .aktuelltText .text {
+  display: none;
+}
+
+.aWarp {
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 5px;
+}
+@media screen and (min-width: 801px) {
+  .aWarp {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 5px;
+  }
+}
+.aWarp .CreateAktuellt {
+  margin-top: 75px;
+  background-color: #1E4363;
+  color: white;
+  padding: 10px 0 10px 0;
+}
+.aWarp .CreateAktuellt textarea {
+  resize: none;
+}
+.aWarp .CreateAktuellt .createPost {
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 10px;
+  margin: 50px;
+}
+.aWarp .CreateAktuellt .btn {
+  border: 1px solid #303030;
+  background-color: #FFB00D;
+  color: #303030;
+  padding: 12px 20px;
+  border-radius: 4px;
+  font-size: 20px;
+  width: 20%;
+  height: auto;
+  text-align: center;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.aWarp .CreateAktuellt .btn1 {
+  border: 1px solid #303030;
+  background-color: #FF5B5B;
+  color: #303030;
+  padding: 12px 20px;
+  border-radius: 4px;
+  font-size: 20px;
+  width: 20%;
+  height: auto;
+  text-align: center;
+  margin-right: 10px;
+}
+.aWarp .adminAktuellt {
+  margin-top: 75px;
+  background-color: #1E4363;
+}
+.aWarp .adminAktuellt #createH3 {
+  color: white;
+}
+
+.aktuelltbild {
+  width: 100%;
+  height: 500px;
+  margin-top: 75px;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../img/aktuelltBild.jpg");
+}
+
+.DeleteAktuellt {
+  margin-top: 55px;
+  padding-top: 220px;
+  text-align: center;
+  height: 600px;
+  background-color: #1E4363;
+  color: white;
+}
+.DeleteAktuellt .btn {
+  border: 1px solid #303030;
+  background-color: #FFB00D;
+  color: #303030;
+  padding: 12px 20px;
+  border-radius: 4px;
+  font-size: 20px;
+  width: 20%;
+  height: auto;
+  text-align: center;
+  margin-right: 10px;
+}
+.DeleteAktuellt .btn1 {
+  border: 1px solid #303030;
+  background-color: #FF5B5B;
+  color: #303030;
+  padding: 12px 20px;
+  border-radius: 4px;
+  font-size: 20px;
+  width: 20%;
+  height: auto;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.UpdateAktuellt {
+  margin-top: 75px;
+  background-color: #1E4363;
+  color: white;
+  padding: 10px 0 10px 0;
+}
+.UpdateAktuellt textarea {
+  resize: none;
+}
+.UpdateAktuellt .createPost {
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 10px;
+  margin: 50px;
+}
+.UpdateAktuellt .btn {
+  border: 1px solid #303030;
+  background-color: #FFB00D;
+  color: #303030;
+  padding: 12px 20px;
+  border-radius: 4px;
+  font-size: 20px;
+  width: 20%;
+  height: auto;
+  text-align: center;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.UpdateAktuellt .btn1 {
+  border: 1px solid #303030;
+  background-color: #FF5B5B;
+  color: #303030;
+  padding: 12px 20px;
+  border-radius: 4px;
+  font-size: 20px;
+  width: 20%;
+  height: auto;
+  text-align: center;
+  margin-right: 10px;
+}
+
+/*Bildspel*/
+body, #slider, .wrap, .slide-content {
+  height: 200px;
+}
+@media screen and (min-width: 800px) {
+  body, #slider, .wrap, .slide-content {
+    margin-top: 0;
+    padding: 0;
+    width: 100%;
+    height: 500px;
+    overflow-x: hidden;
+  }
+}
+
+.wrap {
+  position: relative;
+  margin-top: 75px;
+  z-index: 0;
+}
+
+.slide {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slide1 {
+  background-image: url("../bildSpel/bilder/bild1.jpg");
+}
+
+.slide2 {
+  background-image: url("../bildSpel/bilder/startbild.jpg");
+}
+
+.slide3 {
+  background-image: url("../bildSpel/bilder/gruppbildcopy.jpg");
+}
+
+.slide-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.slide-content span {
+  font-size: 5rem;
+  color: white;
+}
+
+.arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin-top: -30px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  opacity: 0.25;
+  transition: opacity 0.4s linear;
+}
+
+#arrow-left {
+  border-width: 30px 40px 30px 0;
+  border-color: transparent white transparent transparent;
+  left: 0;
+  margin-left: 30px;
+  opacity: 0.4;
+}
+
+#arrow-right {
+  border-width: 30px 0 30px 40px;
+  border-color: transparent transparent transparent white;
+  right: 0;
+  margin-right: 30px;
+  opacity: 0.4;
+}
+
+#arrow-left:hover {
+  opacity: 1;
+}
+
+#arrow-right:hover {
+  opacity: 1;
+}
+
+#arrow-left {
+  border-width: 30px 40px 30px 0;
+  border-color: transparent white transparent transparent;
+  left: 0;
+  margin-left: 30px;
+  opacity: 0.4;
+  z-index: 1;
+}
+
+#arrow-right {
+  border-width: 30px 0 30px 40px;
+  border-color: transparent transparent transparent white;
+  right: 0;
+  margin-right: 30px;
+  opacity: 0.4;
+}
+
+#arrow-left:hover {
+  opacity: 1;
+}
+
+#arrow-right:hover {
+  opacity: 1;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 3s;
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*Bildspel slut*/
+/*Används för att kunna skriva det som ska vara i desktop läge. */
+.itInfo {
+  color: white;
+}
+.itInfo h2 {
+  margin-top: 20px;
+  padding: 10px;
+  color: white;
+}
+.itInfo .contentit {
+  display: grid;
+  grid-template-rows: auto;
+  grid-gap: 2px;
+  text-align: left;
+  margin: 0 auto;
+}
+@media screen and (min-width: 800px) {
+  .itInfo .contentit {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 10px;
+    width: 500px;
+  }
+}
+.itInfo .contentit h3 {
+  margin: 15px;
+  color: white;
+  font-size: 30px;
+}
+@media screen and (min-width: 800px) {
+  .itInfo .contentit h3 {
+    font-size: 20px;
+  }
+}
+.itInfo .contentit p {
+  font-size: 20px;
+  text-decoration: none;
+  margin: 15px;
+}
+@media screen and (min-width: 800px) {
+  .itInfo .contentit p {
+    font-size: 16px;
+    color: white;
+  }
+}
+.itInfo .contentit img {
+  margin: 15px 10px 10px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 90%;
+  height: auto;
+}
+@media screen and (min-width: 800px) {
+  .itInfo .contentit img {
+    margin: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+  }
+}
+
+.headerIt {
+  background-image: url("../img/it.jpeg");
+}
+
+/*Används för att kunna skriva det som ska vara i desktop läge. */
+.javaInfo {
+  color: white;
+}
+.javaInfo h2 {
+  margin-top: 20px;
+  padding: 10px;
+  color: white;
+}
+.javaInfo .contentJava {
+  display: grid;
+  grid-template-rows: auto;
+  grid-gap: 2px;
+  text-align: left;
+  margin: 0 auto;
+}
+@media screen and (min-width: 800px) {
+  .javaInfo .contentJava {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 10px;
+    width: 500px;
+  }
+}
+.javaInfo .contentJava h3 {
+  margin: 15px;
+  color: white;
+  font-size: 30px;
+}
+@media screen and (min-width: 800px) {
+  .javaInfo .contentJava h3 {
+    font-size: 20px;
+  }
+}
+.javaInfo .contentJava p {
+  font-size: 20px;
+  text-decoration: none;
+  margin: 15px;
+  color: white;
+}
+@media screen and (min-width: 800px) {
+  .javaInfo .contentJava p {
+    font-size: 16px;
+    colort: white;
+  }
+}
+.javaInfo .contentJava img {
+  margin: 15px 10px 10px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 90%;
+  height: auto;
+}
+@media screen and (min-width: 800px) {
+  .javaInfo .contentJava img {
+    margin: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+  }
+}
+
+.headerBild {
+  background-image: url("../img/programmering.png");
+}
+
+.applybild {
+  width: 100%;
+  height: 200px;
+  background-color: black;
+  margin-top: 75px;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../img/apply.jpg");
+}
+
+#java {
+  margin-top: 30px !important;
+}
+
+#IT {
+  margin-top: 30px !important;
+  margin-bottom: 30px !important;
+}
+
+#edu1 {
+  margin: 0 auto;
+  width: 90%;
+  height: auto;
+  background-color: #1E4363;
+  padding: 10px;
+  text-align: left;
+}
+
+#edu2 {
+  margin: 0 auto;
+  width: 90%;
+  height: auto;
+  background-color: #1E4363;
+  padding: 10px;
+  text-align: left;
+}
+
+.remove {
+  border: 1px solid #303030;
+  background-color: darkred;
+  color: black;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.applybutton {
+  border: 1px solid #303030;
+  background-color: #ffb00d;
+  color: #303030;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btnJava {
+  margin-left: 11px;
+}
+
+.sendsection {
+  margin: 0 auto 30px auto;
+  text-align: left;
+  width: -webkit-calc(90% + 19px);
+}
+
+.removehelper {
+  text-align: right;
+}
+
+.section-text {
+  margin: 0 auto;
+  width: 90%;
+}
+
+#noedus {
+  margin: 0 auto 30px auto;
+  width: 90%;
+}
+
+.thankyou {
+  width: 100%;
+  height: auto;
+}
+
+#checkmark {
+  height: 80px;
+  width: 80px;
+  color: darkgreen;
+}
+
+@media screen and (min-width: 800px) {
+  .applybild {
+    height: 500px;
+  }
+
+  #edu1, #edu2 {
+    width: 40%;
+  }
+
+  .section-text {
+    margin: 0 auto 30px auto;
+    text-align: center !important;
+    width: 40%;
+  }
+
+  .sendsection {
+    width: -webkit-calc(40% + 19px);
+  }
+
+  .sendhelper {
+    width: 40%;
+  }
+
+  #noedus {
+    width: 40%;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .vagledningWrap {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 50px;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 800px) {
+  .vagledningWrap .vagLeft {
+    margin-left: 30px;
+    width: 600px;
+  }
+}
+.vagledningWrap .vagLeft h1 {
+  font-size: 30px;
+}
+@media screen and (min-width: 800px) {
+  .vagledningWrap .vagLeft h1 {
+    font-size: 35px;
+    width: 600px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .vagledningWrap .vagLeft p {
+    width: 450px;
+  }
+}
+.vagledningWrap .vagLeft .btn {
+  border: 1px solid #303030;
+  background-color: #FFB00D;
+  color: #303030;
+  padding: 12px 20px;
+  border-radius: 4px;
+  font-size: 20px;
+  width: 50%;
+  height: auto;
+  text-align: center;
+  margin-right: 10px;
+}
+@media screen and (min-width: 800px) {
+  .vagledningWrap .vagLeft .btn {
+    border: 1px solid #303030;
+    background-color: #FFB00D;
+    color: #303030;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-size: 20px;
+    width: 20%;
+    height: auto;
+    text-align: center;
+    margin-right: 10px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .vagledningWrap .vagLeft .btn:hover {
+    background-color: #1E4363;
+    color: white;
+  }
+}
+@media screen and (min-width: 800px) {
+  .vagledningWrap .vagRight {
+    text-align: left;
+    width: 400px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .vagledningWrap .vagRight .vagledningContentData {
+    background-color: #edf3f9;
+    text-align: left;
+    color: black;
+    border-right: 10px solid #1E4363;
+    padding: 3px 3px 3px 10px;
+    margin-bottom: 5px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .vagledningWrap .vagRight .vagledningContentData:hover {
+    background-color: #FFB00D;
+  }
+}
+.vagledningWrap .vagRight h2 {
+  font-size: 20px;
+}
+@media screen and (min-width: 800px) {
+  .vagledningWrap .vagRight h2 {
+    width: 500px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .vagledningWrap .vagRight .vagExp {
+    background-color: #edf3f9;
+    text-align: left;
+    color: black;
+    border-right: 10px solid #1E4363;
+    padding: 3px 3px 3px 10px;
+    margin-bottom: 5px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .vagledningWrap .vagRight .vagExp:hover {
+    background-color: #FFB00D;
+  }
+}
+
+@media screen and (max-width: 799px) {
+  .vagBild {
+    margin-top: 75px;
+    width: 100%;
+    height: 200px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .vagBild {
+    width: 100%;
+    height: 700px;
+    margin-top: 75px;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../img/vag.jpg");
+  }
+}
+
+/*Mixins för desktop och mobil*/
+/*Variabler för färger/fonter*/
+@media screen and (min-width: 800px) {
+  .headerlogo {
+    width: 70px;
+    height: 51px;
+    margin: 12px 0 0 30px;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../img/logga-campus-skarpare.png");
+    float: left;
+  }
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+}
+@media screen and (min-width: 800px) {
+  p {
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+  }
+}
+
+h1, h2, h3, h4, h4, h6 {
+  font-family: "Roboto Slab", serif;
+}
+
+body {
+  width: 100%;
+  background-color: #3678b1;
+  color: white;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+
+/*Headern navigering*/
+header {
+  width: 100%;
+  height: 75px;
+  position: fixed;
+  top: 0;
+  background-color: #1E4363;
+  z-index: 10;
+}
+@media screen and (min-width: 800px) {
+  header {
+    z-index: 10;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  #menu {
+    display: none;
+  }
+}
+
+hr {
+  width: 40%;
+  border-color: grey !important;
+}
+
+.header-nav {
+  position: fixed;
+  top: 75px;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding: 20px 0 20px 0;
+  background-color: #1E4363;
+  color: #edf3f9;
+  line-height: 25px;
+  z-index: 10;
+}
+@media screen and (min-width: 300px) and (max-width: 799px) {
+  .header-nav {
+    position: fixed;
+    top: 75px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 20px 0 20px 0;
+    background-color: #1E4363;
+    color: #edf3f9;
+    line-height: 25px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .header-nav {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  a:hover {
+    color: #FFB00D;
+  }
+}
+
+a {
+  color: #edf3f9;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 300px) and (max-width: 799px) {
+  .desktopbuttons {
+    display: none;
+  }
+}
+@media screen and (min-width: 800px) {
+  .desktopbuttons {
+    height: 50px;
+    width: 60%;
+    float: left;
+    margin-top: 12.5px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .desktopbuttons li {
+    display: inline;
+    color: #edf3f9;
+    padding-right: 30px;
+    float: left;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .desktoputbildningar {
+    width: 350px;
+    position: fixed;
+    top: 75px;
+    z-index: 10;
+    background-color: #1E4363;
+    color: #edf3f9;
+    left: 100px;
+    right: auto;
+  }
+}
+@media screen and (min-width: 800px) {
+  .desktoputbildningar p {
+    text-align: left;
+    padding-left: 40px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .desktopstudent {
+    width: 300px;
+    position: fixed;
+    top: 75px;
+    z-index: 10;
+    background-color: #1E4363;
+    color: #edf3f9;
+    left: 215px;
+    right: auto;
+  }
+}
+@media screen and (min-width: 800px) {
+  .desktopstudent p {
+    text-align: left;
+    padding-left: 40px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .desktopvagledning {
+    width: 300px;
+    position: fixed;
+    top: 75px;
+    z-index: 10;
+    background-color: #1E4363;
+    color: #edf3f9;
+    left: 355px;
+    right: auto;
+  }
+}
+@media screen and (min-width: 800px) {
+  .desktopvagledning p {
+    text-align: left;
+    padding-left: 40px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .desktopkontakt {
+    width: 300px;
+    position: fixed;
+    top: 75px;
+    z-index: 10;
+    background-color: #1E4363;
+    color: #edf3f9;
+    left: 463px;
+    right: auto;
+  }
+}
+@media screen and (min-width: 800px) {
+  .desktopkontakt p {
+    text-align: left;
+    padding-left: 40px;
+    cursor: pointer;
+  }
+}
+
+#homeicon {
+  color: #edf3f9;
+}
+
+#usericonactive {
+  color: #FFB00D;
+}
+
+.icons {
+  padding-top: 20px;
+}
+.icons .headericon {
+  width: 35px;
+  height: 35px;
+  color: #edf3f9;
+  float: right;
+  padding-right: 20px;
+  cursor: pointer;
+}
+.icons .headericon2 {
+  width: 35px;
+  height: 35px;
+  float: right;
+  padding-right: 20px;
+  cursor: pointer;
+  color: #edf3f9;
+}
+.icons .menu {
+  color: #edf3f9;
+  width: 35px;
+  height: 35px;
+  padding-left: 20px;
+  float: left;
+  cursor: pointer;
+}
+
+.login {
+  position: fixed;
+  top: 75px;
+  width: 100%;
+  height: 170px;
+  background-color: #1E4363;
+}
+@media screen and (min-width: 800px) {
+  .login {
+    width: 400px;
+    height: 170px;
+    position: fixed;
+    top: 75px;
+    z-index: 10;
+    background-color: #1E4363;
+    padding-top: 8.5px;
+    left: auto;
+    right: 0;
+  }
+}
+
+.loginbutton {
+  border: 1px solid #303030;
+  background-color: #FFB00D;
+  color: #edf3f9;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.registerbutton {
+  border: 1px solid #303030;
+  background-color: black;
+  color: #FFB00D;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#loggedintext {
+  padding-left: 20px;
+}
+
+#logoutbutton {
+  margin: 0 0 20px 20px;
+}
+
+.searchfield {
+  width: 100%;
+  height: 110px;
+  position: fixed;
+  top: 75px;
+  background-color: #1E4363;
+  z-index: 10;
+}
+@media screen and (min-width: 800px) {
+  .searchfield {
+    width: 400px;
+    height: 110px;
+    position: fixed;
+    top: 75px;
+    z-index: 10;
+    background-color: #1E4363;
+    padding-top: 8.5px;
+    left: auto;
+    right: 0;
+  }
+}
+
+.logout {
+  text-align: left;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 75px;
+  background-color: #1E4363;
+  z-index: 10;
+  line-height: 10px;
+}
+@media screen and (min-width: 800px) {
+  .logout {
+    width: 300px;
+    height: auto;
+    position: fixed;
+    top: 75px;
+    z-index: 10;
+    background-color: #1E4363;
+    padding-top: 8.5px;
+    left: auto;
+    right: 0;
+  }
+}
+
+.logouttext {
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+.logouticon {
+  padding-right: 10px;
+}
+
+.logout p:hover {
+  color: #FFB00D;
+}
+
+#utbildningar-click, #studenttjänster-click, #vägledning-click, #kontakt-click {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 300px) and (max-width: 799px) {
+  #utbildningar-dropdown, #studenttjänster-dropdown, #vägledning-dropdown, #kontakt-dropdown {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    padding: 10px 0 10px 0;
+  }
+}
+@media screen and (min-width: 800px) {
+  #utbildningar-dropdown, #studenttjänster-dropdown, #vägledning-dropdown, #kontakt-dropdown {
+    overflow: hidden;
+    padding: 10px 0 10px 0;
+  }
+  #utbildningar-dropdown a:active, #studenttjänster-dropdown a:active, #vägledning-dropdown a:active, #kontakt-dropdown a:active {
+    color: white;
+  }
+}
+
+/*Sätt desktop om behövs var samma som mobil*/
+.buttonshelper {
+  width: -webkit-calc(90% + 11px);
+  margin: 10px auto;
+}
+.buttonshelper .loginbutton {
+  float: left;
+}
+.buttonshelper .registerbutton {
+  float: left;
+  margin-left: 10px;
+}
+
+.mobmenu1 {
+  height: 35px;
+  border-top: 1px solid #1E4363;
+}
+
+.mobmenu2 {
+  margin-top: 15px;
+  height: 35px;
+  border-top: 1px solid #1E4363;
+}
+
+.mobmenu3 {
+  margin-top: 15px;
+  padding-bottom: 15px;
+  height: 35px;
+  border-top: 1px solid #1E4363;
+  border-bottom: 1px solid #1E4363;
+}
+
+/*
+.logout {
+  @include desktop {
+    width: 400px;
+    height: 50px;
+    position: fixed;
+    top: 75px;
+    z-index: 10;
+    background-color: $dropdown;
+    left: auto;
+    right: 0;
+  }
+}
+*/
+/*Header navigering slut*/
+/*Footer Start*/
+.footer {
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 25px;
+  margin-top: 15px;
+  margin-bottom: 0;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  background-color: #1E4363;
+  color: #edf3f9;
+  left: 0;
+  right: 0;
+  text-align: center;
+  justify-content: center;
+  /*använder denna för att länkarna inte ska bli formaterade*/
+  /* campus mölndal ikon*/
+  /*flexar content*/
+  /*kontakt*/
+  /*Sociala medier*/
+}
+@media screen and (min-width: 800px) {
+  .footer {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto;
+    align-items: center;
+    margin-bottom: 0;
+    width: 100%;
+    background-color: #1E4363;
+    color: #edf3f9;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+}
+.footer .linkFooter {
+  color: white;
+}
+@media screen and (min-width: 800px) {
+  .footer .linkFooter {
+    color: #edf3f9;
+  }
+}
+.footer .item1 {
+  padding-left: 40px;
+}
+@media screen and (min-width: 800px) {
+  .footer .item1 {
+    margin-top: 50px;
+    margin-left: 125px;
+    margin-bottom: 50px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .footer .item2 {
+    margin-top: 50px;
+    margin-left: 125px;
+    margin-bottom: 50px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .footer .item3 {
+    margin-top: 50px;
+    margin-left: 125px;
+    margin-bottom: 50px;
+    margin-right: 125px;
+  }
+}
+/*storleken på SM ikonerna*/
+.footerIcons {
+  font-size: 40px;
+}
+@media screen and (min-width: 800px) {
+  .footerIcons {
+    font-size: 50px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  iframe {
+    margin-right: 100px;
+  }
+}
+
+/*Footer slut*/
+/*Inlogg*/
+.field {
+  width: 90%;
+  height: 28px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+input[type=text], [type=password], [type=email] {
+  width: 90%;
+  height: 28px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  box-sizing: unset;
+}
+
+.wrapper-main {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/*Inlogg slutar*/
+/*Mitten delen mellan bildspel och aktuellt.*/
+.contentStart {
+  display: grid;
+  grid-template-columns: auto;
+}
+@media screen and (min-width: 800px) {
+  .contentStart {
+    margin-left: 350px;
+    margin-right: 350px;
+  }
+}
+.contentStart .sItem1 h1 {
+  font-size: 55px;
+  padding: 10px 0 2px 0;
+  color: white;
+  font-family: "Roboto Slab", serif;
+}
+.contentStart .sItem1 p {
+  line-height: 1.5;
+}
+.contentStart .sItem2 {
+  padding-bottom: 20px;
+}
+.contentStart .sItem2 h2 {
+  font-size: 50px;
+  color: white;
+  font-family: "Roboto Slab", serif;
+}
+.contentStart .sItem2 h4 {
+  font-size: 25px;
+  color: white;
+  font-family: "Roboto Slab", serif;
+}
+.contentStart .sItem2 p {
+  font-size: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */

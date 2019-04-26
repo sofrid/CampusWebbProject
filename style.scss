@@ -1,0 +1,567 @@
+@charset "UTF-8";
+@import "scss/aktuellt";
+@import "scss/bildspel";
+@import "scss/itInfo";
+@import "scss/javainfo";
+@import "scss/apply";
+@import "scss/vagledning";
+
+/*Mixins för desktop och mobil*/
+@mixin desktop(){
+  @media screen and (min-width: 800px) {
+    @content
+  }
+}
+@mixin mobile(){
+  @media screen and (min-width: 300px) and (max-width: 799px) {
+    @content
+  }
+}
+/*Variabler för färger/fonter*/
+$header: #1E4363;
+$dropdown:#1E4363;
+$textheader:lighten(#1E4363, 70%);
+$bg:lighten(#1E4363, 20%);
+$text:white;
+$btn:#FFB00D;
+$fontHeading: 'Roboto Slab', serif;
+$fontText:'Roboto', sans-serif;
+
+.headerlogo{
+  @include desktop {
+    width: 70px;
+    height: 51px;
+    margin: 12px 0 0 30px;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../img/logga-campus-skarpare.png");
+    float: left;
+  }
+}
+
+p{
+    font-family: $fontText;
+    font-size: 20px;
+  @include desktop {
+    font-size: 18px;
+    font-family: $fontText;
+  }
+  }
+h1,h2,h3,h4,h4,h6{  font-family: $fontHeading;}
+
+body {
+  width: 100%;
+  background-color: $bg;
+  color:$text;
+  margin: 0 auto;
+  text-align: center;
+  font-family:$fontText;
+
+}
+
+/*Headern navigering*/
+
+header{
+  width: 100%;
+  height: 75px;
+  position: fixed;
+  top: 0;
+  background-color: $header;
+  z-index: 10;
+  @include desktop {
+    z-index: 10;
+  }
+}
+#menu {
+  @include desktop {
+    display: none;
+  }
+}
+hr {
+  width: 40%;
+  border-color: grey!important;
+}
+.header-nav{
+// Merge conflict 5 dec
+  position: fixed;
+  top: 75px;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding: 20px 0 20px 0; // center
+  background-color: $header;
+  color: $textheader;
+  line-height: 25px;
+  z-index: 10;
+
+  @include mobile {
+    position: fixed;
+    top: 75px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 20px 0 20px 0; // center
+    background-color: $header;
+    color: $textheader;
+    line-height: 25px;
+  }
+
+  @include desktop {
+    display: none;
+  }
+}
+a:hover {
+  @include desktop {
+    color: $btn;
+  }
+}
+a {                     // tog bort a:visited eftersom den orangea färgen inte fungerade vid :hover efter besök på undersidor
+  color: $textheader;
+  text-decoration: none;
+}
+  .desktopbuttons {
+@include mobile {
+  display: none;
+}
+    @include desktop{
+      height: 50px;
+      width: 60%;
+      float: left;
+      margin-top: 12.5px;
+    }
+    li {
+      @include desktop {
+        display: inline;
+        color: $textheader;
+        padding-right: 30px;
+        float: left;
+        cursor: pointer;
+      }
+    }
+  }
+.desktoputbildningar {
+@include desktop {
+  width: 350px;
+  position: fixed;
+  top: 75px;
+  z-index: 10;
+  background-color: $dropdown;
+  color: $textheader;
+  left: 100px;
+  right: auto;
+}
+  p{
+    @include desktop {
+      text-align: left;
+      padding-left: 40px;
+      cursor: pointer;
+    }
+  }
+}
+
+.desktopstudent{
+  @include desktop {
+    width: 300px;
+    position: fixed;
+    top: 75px;
+    z-index: 10;
+    background-color: $dropdown;
+    color: $textheader;
+    left: 215px;
+    right: auto;
+  }
+  p{
+    @include desktop {
+      text-align: left;
+      padding-left: 40px;
+      cursor: pointer;
+    }
+  }
+}
+
+.desktopvagledning{
+  @include desktop {
+    width: 300px;
+    position: fixed;
+    top: 75px;
+    z-index: 10;
+    background-color: $header;
+    color: $textheader;
+    left: 355px;
+    right: auto;
+  }
+  p{
+    @include desktop {
+    text-align: left;
+    padding-left: 40px;
+    cursor: pointer;
+  }
+  }
+}
+
+.desktopkontakt{
+  @include desktop {
+    width: 300px;
+    position: fixed;
+    top: 75px;
+    z-index: 10;
+    background-color: $header;
+    color: $textheader;
+    left: 463px;
+    right: auto;
+  }
+  p {
+    @include desktop {
+      text-align: left;
+      padding-left: 40px;
+      cursor: pointer;
+    }
+  }
+}
+#homeicon{
+  color: $textheader;
+}
+
+#usericonactive{
+  color: $btn;
+
+}
+.icons {
+  padding-top: 20px;
+
+  .headericon {
+    width: 35px;
+    height: 35px;
+    color: $textheader;
+    float: right;
+    padding-right: 20px;
+    cursor: pointer;
+  }
+
+  .headericon2 {
+    width: 35px;
+    height: 35px;
+    float: right;
+    padding-right: 20px;
+    cursor: pointer;
+    color: $textheader;
+
+  }
+  .menu {
+    color: $textheader;
+    width: 35px;
+    height: 35px;
+    padding-left: 20px;
+    float: left;
+    cursor: pointer;
+  }
+}
+.login {
+  position: fixed;
+  top: 75px;
+  width: 100%;
+  height: 170px;
+  background-color: $header;
+  @include desktop{
+    width: 400px;
+    height: 170px;
+    position: fixed;
+    top: 75px;
+    z-index: 10;
+    background-color: $header;
+    padding-top: 8.5px;
+    left: auto;
+    right: 0;
+  }
+}
+.loginbutton {
+  border: 1px solid #303030;
+  background-color: $btn;
+  color: $textheader;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.registerbutton {
+  border: 1px solid #303030;
+  background-color: black;
+  color: $btn;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#loggedintext{
+  padding-left: 20px;
+}
+
+#logoutbutton{
+  margin: 0 0 20px 20px;
+}
+
+.searchfield {
+  width: 100%;
+  height: 110px;
+  position: fixed;
+  top: 75px;
+  background-color: $header;
+  z-index: 10;
+  @include desktop{
+      width: 400px;
+      height: 110px;
+      position: fixed;
+      top: 75px;
+      z-index: 10;
+      background-color: $header;
+      padding-top: 8.5px;
+      left: auto;
+      right: 0;
+  }
+}
+
+.logout{
+  text-align: left;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 75px;
+  background-color: $header;
+  z-index: 10;
+  line-height: 10px;
+  @include desktop{
+    width: 300px;
+    height: auto;
+    position: fixed;
+    top: 75px;
+    z-index: 10;
+    background-color: $header;
+    padding-top: 8.5px;
+    left: auto;
+    right: 0;
+  }
+
+}
+
+.logouttext{
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+.logouticon{
+  padding-right: 10px;
+}
+
+.logout p:hover{
+  color: $btn;
+}
+
+#utbildningar-click, #studenttjänster-click, #vägledning-click, #kontakt-click {
+  cursor: pointer;
+}
+
+#utbildningar-dropdown, #studenttjänster-dropdown, #vägledning-dropdown, #kontakt-dropdown {
+  @include mobile {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    padding: 10px 0 10px 0;
+  }
+ @include desktop{
+    overflow: hidden;
+    padding: 10px 0 10px 0; //center
+    a:active {
+      color: white;
+    }
+  }
+}
+/*Sätt desktop om behövs var samma som mobil*/
+.buttonshelper{
+  width: -webkit-calc(90% + 11px);
+  margin: 10px auto;
+  .loginbutton{
+    float: left;
+  }
+  .registerbutton{
+    float: left;
+    margin-left: 10px;
+  }
+}
+
+.mobmenu1{
+  height: 35px;
+  border-top: 1px solid $header;
+}
+
+.mobmenu2{
+
+  margin-top: 15px;
+  height: 35px;
+  border-top: 1px solid $header;
+}
+
+.mobmenu3{
+
+  margin-top: 15px;
+  padding-bottom: 15px;
+  height: 35px;
+  border-top: 1px solid $header;
+  border-bottom: 1px solid $header;
+}
+/*
+.logout {
+  @include desktop {
+    width: 400px;
+    height: 50px;
+    position: fixed;
+    top: 75px;
+    z-index: 10;
+    background-color: $dropdown;
+    left: auto;
+    right: 0;
+  }
+}
+*/
+  /*Header navigering slut*/
+
+
+/*Footer Start*/
+  .footer{
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 25px;
+    margin-top: 15px;
+    margin-bottom: 0;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    background-color: $header;
+    color: $textheader;
+    left: 0;
+    right: 0;
+    text-align: center;
+    justify-content: center;
+
+    @include desktop{
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      grid-template-rows: auto;
+      align-items: center;
+      margin-bottom: 0;
+      width: 100%;
+      background-color: $header;
+      color: $textheader;
+      left: 0;
+      right: 0;
+      text-align: center;
+    }
+
+    /*använder denna för att länkarna inte ska bli formaterade*/
+    .linkFooter{
+      color: white;
+      @include desktop{
+        color: $textheader;
+      }
+    }
+    /* campus mölndal ikon*/  /*flexar content*/
+    .item1{
+      padding-left: 40px;
+    @include desktop{
+      margin-top: 50px;
+      margin-left: 125px;
+      margin-bottom: 50px;
+    }
+    }
+    /*kontakt*/
+    .item2{
+      @include desktop{
+        margin-top: 50px;
+        margin-left: 125px;
+        margin-bottom: 50px;
+      }
+    }
+    /*Sociala medier*/
+    .item3{
+      @include desktop{
+        margin-top: 50px;
+        margin-left: 125px;
+        margin-bottom: 50px;
+        margin-right: 125px;
+      }
+    }
+    .item4{}
+  }
+/*storleken på SM ikonerna*/
+  .footerIcons{
+    font-size: 40px;
+    @include desktop{
+        font-size: 50px;
+    }
+  }
+iframe {
+  @include desktop {
+    margin-right: 100px;
+  }
+}
+/*Footer slut*/
+
+/*Inlogg*/
+.field{
+  width: 90%;
+  height: 28px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+}
+input[type=text], [type=password], [type=email] {
+  width: 90%;
+  height: 28px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  box-sizing: unset;
+}
+
+.wrapper-main{
+  width: 90%;
+  margin: 0 auto;
+
+}
+/*Inlogg slutar*/
+
+/*Mitten delen mellan bildspel och aktuellt.*/
+.contentStart{
+  display: grid;
+  grid-template-columns: auto;
+  @include desktop{
+    margin-left: 350px;
+    margin-right: 350px;
+  }
+.sItem1 {
+  h1 {
+    font-size: 55px;
+    padding: 10px 0 2px 0;
+    color: $text;
+    font-family: $fontHeading;
+  }
+  p{
+    line-height: 1.5;
+  }
+}
+  .sItem2{
+    padding-bottom: 20px;
+    h2 {
+      font-size: 50px;
+      color: $text;
+      font-family: $fontHeading;
+    }
+    h4{
+      font-size: 25px;
+      color: $text;
+      font-family: $fontHeading;
+    }
+    p{
+     font-size: 20px;
+
+    }
+  }
+}

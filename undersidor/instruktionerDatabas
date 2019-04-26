@@ -1,0 +1,32 @@
+Skapa en databas som heter CampusDB ( med utf8_general_ci)
+
+Skapa tabellen nyheter med SQL:
+
+CREATE TABLE nyheter(
+    nyheterId INT NOT NULL AUTO_INCREMENT,
+    nyheterRubrik VARCHAR(50),
+    nyheterStartsida TEXT,
+    nyheterPost TEXT,
+    nyheterDatum, Date,
+    PRIMARY KEY (nyheterId)
+    );
+
+
+
+Skapa tabellen users med SQL:
+
+    idUsers int(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    uidUsers TINYTEXT NOT NULL,
+    emailUsers TINYTEXT NOT NULL,
+    pwdUsers LONGTEXT NOT NULL
+    );
+
+
+Skapa tabellen article med SQL:
+
+    a_id int(11) not null PRIMARY KEY AUTO_INCREMENT,
+    a_title varchar(256) not null,
+    a_text text not null,
+    a_author varchar(256) not null,
+    a_date datetime not null
+    );

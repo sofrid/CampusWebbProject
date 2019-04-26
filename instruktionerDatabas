@@ -1,0 +1,12 @@
+Skapa en databas som heter CampusDB ( med utf8_general_ci)
+
+Skapa tabellen aktuellt med SQL:
+
+CREATE TABLE aktuellt(
+          aId INT NOT NULL AUTO_INCREMENT,
+          aHeadline VARCHAR(50),
+          aSummation TEXT,
+          aPost TEXT,
+          aDate, Date,
+          PRIMARY KEY (aId)
+          );

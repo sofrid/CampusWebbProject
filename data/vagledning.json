@@ -1,0 +1,28 @@
+{
+  "starta":[
+    {
+      "name": "Johan Rydestam",
+      "work": "Studie- och yrkesvägledare",
+      "number": "031 - 315 10 13",
+      "email": "johan.rydestam@molndal.se"
+    },
+    {
+      "name": "Lisa Rosén",
+      "work": "Studie- och yrkesvägledare",
+      "number": "031 - 315 30 18",
+      "email": "lisa.rosen@molndal.se"
+    },
+    {
+      "name": "Birgit Engblad",
+      "work": "Studie- och yrkesvägledare för dig som redan är elev på SFI eller SASG",
+      "number": "031 - 315 30 19",
+      "email": "birgit.engblad@molndal.se"
+    },
+    {
+      "name": "Magnus Bergkvist",
+      "work": "Studie- och yrkesvägledare för grundsärskola, gymnsiesärskola, särskild utbildning för vuxna",
+      "number": "031 - 315 10 14",
+      "email": "magnus.bergkvis@molndal.se"
+    }
+  ]
+}
